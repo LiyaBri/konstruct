@@ -1,0 +1,105 @@
+//@import 'libs/bootstrap-reboot.min';
+@import 'blocks/null';
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,800&display=swap');
+@import 'blocks/adaptive';
+
+
+//var
+$minWidth: 320px;
+$maxWidth: 1440;
+$maxWidthContainer: 941;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98px;
+$md3: 767.98px; 
+$md4: 479.98px;
+$blueColor: #00A4E5;
+$mainColor: #fff;
+
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    color: $mainColor;
+    font-size: 16px;
+    
+}
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden; //контент обрезается без предоставления прокрутки
+    display: flex; 
+    flex-direction: column;
+}
+
+header, footer {
+    flex: 0 0 auto; //шапка сверху, футер снизу
+}
+
+.page {
+    flex: 1 1 auto;
+}
+
+._container {
+    max-width: $maxWidthContainer + px;
+    margin: 0 auto;
+    @media (max-width: $md2) {
+        max-width: 940px;
+        padding: 0 30px;
+    }
+    @media (max-width: $md3) {
+        max-width: 720px;
+    }
+    @media (max-width: $md4) {
+        max-width: none;
+        padding: 0 10px;
+    }
+}
+
+._ibg {
+    position: relative;
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+}
+
+._title {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2.30625px;
+    color: #48555B;
+}
+
+._line {
+    margin-top: 12px;
+    height: 2px;
+    width: 50px;
+    border: 2px solid $blueColor;
+}
+
+._btn {
+    width: 150px;
+    height: 40px;
+    background: $blueColor;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    border: none;
+    transition: all 0.3s ease 0s;
+    &:hover {
+        box-shadow: 0 0 15px rgba($color: $blueColor, $alpha: 0.7);
+    }
+}
+
+@import 'blocks/header';
+@import 'blocks/nav';
+@import 'blocks/story';
+@import 'blocks/capabilities';
+@import 'blocks/touch';
+@import 'blocks/footer';

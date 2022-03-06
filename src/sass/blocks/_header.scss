@@ -1,0 +1,48 @@
+.header {
+    background: url('../img/header.jpg') center center/cover no-repeat;
+    min-height: 100vh;
+    @media (max-width: $md1) {
+        @include adaptiv-value("min-height", 769, 400, 1);
+    }
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__logo {
+        @include adaptiv-value("padding-top", 41, 20, 1);
+        align-self: center;
+    }
+    &__title {
+        font-family: 'Bebas Neue', cursive;
+        font-weight: normal;
+        @include adaptiv-value("font-size", 60, 40, 1);
+        text-transform: uppercase;
+        @include adaptiv-value("margin-top", 247, 147, 1);
+        text-align: center;
+        letter-spacing: 5.7px;
+        line-height: 110%;
+        @media (min-width: $maxWidth) {
+            margin-top: 350px;
+        }
+    }
+    &__subtitle {
+        text-align: center;
+        line-height: 19px;
+    }
+    &__scroll {
+        @include adaptiv-value("margin-top", 200, 70, 1);
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 13px;
+        text-align: center;
+        letter-spacing: 3.7px;
+        transition: all 0.3s ease 0s;
+        &:hover {
+            color: #00A4E5;
+        }
+        @media (max-width: $md1) {
+            margin-bottom: 20px;
+        }
+    }
+}

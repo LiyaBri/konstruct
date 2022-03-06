@@ -1,0 +1,114 @@
+.footer {
+    background-color: #171819;
+    @include adaptiv-value("padding-top", 42, 20, 1);
+    padding-bottom: 23px;
+    a {
+        &:hover {
+            color: $blueColor;
+        }
+    }
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        @media (max-width: $md2) {
+            flex-direction: column;
+            justify-content: start;
+        }
+    }
+    &__desc {
+        margin-top: 15px;
+        flex: 0 0 250px;
+        font-size: 11px;
+        line-height: 19px;
+        letter-spacing: 0.85px;
+        @media (max-width: $md2) {
+            flex: 0 0 auto;
+            margin-bottom: 20px;
+        }
+    }
+    &__title {
+        font-size: 11px;
+        line-height: 13px;
+        letter-spacing: 0.846154px;
+        margin-bottom: 19px;
+    }
+    &__menu {
+        flex: 1 1 auto;
+    }
+    &__contact {
+    }
+    &__social {
+        flex: 0 0 87px;
+    }
+    &__divider {
+        margin: 0 auto;
+        @include adaptiv-value ("margin-top", 61, 00, 1);
+        text-align: center;
+        font-size: 11px;
+        letter-spacing: 0.846154px;
+    }
+}
+.menu {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 58px 0 71px;
+    font-size: 11px;
+    line-height: 227%;
+    letter-spacing: 0.846154px;
+    text-transform: uppercase;
+    @media (max-width: $md2) {
+        padding: 0;
+        margin-bottom: 40px;
+    }
+    &__nav {
+        margin-right: 34px;
+    }
+    &__ul {
+        li {
+            margin-top: 10px;
+        }
+    }
+    &__faq {
+        margin-top: 35px;
+        margin-right: 34px;
+    }
+    &__blog {
+        margin-top: 35px;
+    }
+}
+.contact {
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.846154px;
+    &__text {
+        text-transform: uppercase;
+    }
+    &__add {
+        @include adaptiv-value ("min-height", 128, 80, 1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+}
+.social {
+    margin-left: 46px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    &__item {
+        width: 12px;
+        height: 12px;
+        &:hover {
+            img {
+                width: 120%;
+            }
+        }
+    }
+    @media (max-width: $md2) {
+        width: 87px;
+        margin-left: 0;
+    }
+}

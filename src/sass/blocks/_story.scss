@@ -1,0 +1,66 @@
+.story {
+    min-height: 344px;
+    @include adaptiv-value("margin-top", 58, 20, 1);
+    @include adaptiv-value("margin-bottom", 118, 40, 1);
+    &__title {
+        margin: 0 auto;
+        text-align: center;
+    }
+    &__line {
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+    &__wrapper {
+        @include adaptiv-value("margin-top", 80, 20, 1);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__wrapper-item {
+        flex: 1 0 405px;
+        @include adaptiv-value("padding-right", 77, 0, 1);
+        @media (max-width: $md2) {
+            padding-right: 0;
+            flex: 1 1 auto;
+            justify-self: center;
+        }
+    }
+    &__wrapper-img {
+        flex: 1 0 460px;
+        align-self: end;
+        @media (max-width: $md2) {
+            flex: 1 1 auto;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+    &__desctitle {
+        @include adaptiv-value("font-size", 20, 16, 1);
+        font-weight: 600;
+        line-height: 130%;
+        letter-spacing: 0.1875px;
+        color: #48555B;
+        span {
+            color: #00A4E5;
+        }
+    }
+    &__desc {
+        @include adaptiv-value("margin-top", 30, 15, 1);
+        font-size: 13px;
+        line-height: 177%;
+        letter-spacing: 0.1875px;
+        color: #48555B;
+    }
+    &__img {
+        margin-right: 20px;
+        &:last-child {
+            margin-right: 0;
+        }
+        @media (max-width: $md2) {
+            margin-top: 10px;
+        }
+    }
+}
